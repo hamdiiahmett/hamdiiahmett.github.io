@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmet Hamdi Oğuz — Backend Developer</title>
+  <meta name="description" content="Ahmet Hamdi Oğuz — Yazılım Geliştirici & Backend Developer. C# ve .NET Teknolojileriyle Güçlü Backend Mimarileri İnşa Ediyorum." />
+  <meta name="keywords" content="Ahmet Hamdi Oğuz, portfolyo, backend developer, yazılım geliştirici, c#, .net core, sql, veri bilimi" />
+  <meta name="author" content="Ahmet Hamdi Oğuz" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR GLOW (follows mouse)
+  ════════════════════════════════════════════ -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Ahmet Hamdi</span>
+        <span class="logo-bracket"> /&gt;</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Ana Sayfa</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">Hakkımda</a></li>
+        <li><a href="#timeline" class="nav-link" data-section="timeline">Yolculuğum</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Eğitim</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Yetenekler</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">İletişim</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="nav-cta">Bana Ulaşın</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü Aç/Kapat">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-effects">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-orb hero-orb--3"></div>
+      <div class="hero-grid-overlay"></div>
+    </div>
+
+    <div class="hero-content container">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        <span>Yeni fırsatlara açığım</span>
+      </div>
+
+      <h1 class="hero-title reveal">
+        Merhaba, ben
+        <span class="hero-name gradient-text">Ahmet Hamdi Oğuz</span>
+      </h1>
+
+      <div class="hero-typing reveal">
+        <span class="typing-prefix">// </span>
+        <span id="typing-text" class="typing-text"></span>
+        <span class="typing-cursor">|</span>
+      </div>
+
+      <p class="hero-description reveal">
+        C# ve .NET Teknolojileriyle <strong>Güçlü, Ölçeklenebilir Backend Mimarileri</strong> 
+        ve <strong>Veri Odaklı Sistemler</strong> İnşa Ediyorum.
+      </p>
+
+      <div class="hero-ctas reveal">
+        <!-- CV DROPDOWN (TR & EN) -->
+        <div class="cv-dropdown-wrapper" id="hero-cv-dropdown">
+          <button class="btn btn-primary cv-trigger-btn" type="button" aria-haspopup="true" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            <span>CV İndir</span>
+            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="cv-dropdown-menu glass-card">
+            <a href="Ahmet_Hamdi_Oguz_CV_TR.pdf" download="Ahmet_Hamdi_Oguz_CV_TR.pdf" class="cv-dropdown-item">
+              <span class="cv-flag">🇹🇷</span>
+              <div class="cv-item-info">
+                <strong>Türkçe CV</strong>
+                <small>PDF formatında indir</small>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            </a>
+            <a href="Ahmet_Hamdi_Oguz_CV_EN.pdf" download="Ahmet_Hamdi_Oguz_CV_EN.pdf" class="cv-dropdown-item">
+              <span class="cv-flag">🇬🇧</span>
+              <div class="cv-item-info">
+                <strong>English CV</strong>
+                <small>Download PDF format</small>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <span>Bana Ulaşın</span>
+        </a>
+        <a href="#timeline" class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2"/></svg>
+          <span>Projeleri İncele</span>
+        </a>
+      </div>
+
+      <div class="hero-socials reveal">
+        <a href="https://www.linkedin.com/in/ahmet-hamdi-o%C4%9Fuz-4b7ba5344/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/hamdiiahmett" target="_blank" rel="noopener" class="social-link" aria-label="GitHub" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+        <a href="mailto:ahoo00881@icloud.com" class="social-link" aria-label="E-posta" title="E-posta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <a href="#about" aria-label="Aşağı kaydır">
+        <div class="scroll-mouse">
+          <div class="scroll-dot"></div>
+        </div>
+        <span>Keşfet</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">01 — Hakkımda</span>
+        <h2 class="section-title">Hikayem<span class="dot">.</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-story reveal">
+          <div class="about-card glass-card">
+            <div class="about-card-glow"></div>
+            <p>
+              Backend geliştirme dünyasına tutkuyla bağlı bir yazılım geliştiriciyim. 
+              <strong>C# ve .NET Core ekosisteminde uzmanlaşarak</strong>, kurumsal ölçekte backend mimarileri, API tasarımları ve veritabanı çözümleri geliştiriyorum.
+            </p>
+            <p>
+              Yazılım geliştirmenin yanı sıra Veri Bilimi, Makine Öğrenmesi ve Python ile ilgilenerek yapay zeka alanında da kendimi sürekli güncelliyorum. 
+              Problem çözme odaklı yaklaşımım ve sistem mimarilerine olan merakımla sürdürülebilir, yüksek performanslı yazılımlar üretmeyi hedefliyorum.
+            </p>
+            <p>
+              Ulusal DGS sınavında <strong>359. oldum</strong> ve mühendisliğe geçiş yaparak kariyerimi sağlam adımlarla ileriye taşıyorum.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-highlights reveal">
+          <div class="highlight-card glass-card">
+            <div class="highlight-icon"><i data-lucide="server"></i></div>
+            <div class="highlight-info">
+              <h3>Güçlü Mimari</h3>
+              <p>Ölçeklenebilir, SOLID prensiplerine uygun ve güvenli backend sistemleri.</p>
+            </div>
+          </div>
+          <div class="highlight-card glass-card">
+            <div class="highlight-icon"><i data-lucide="database"></i></div>
+            <div class="highlight-info">
+              <h3>Veri Odaklı</h3>
+              <p>İlişkisel veritabanları (SQL), ORM (Dapper) ve optimize edilmiş sorgular.</p>
+            </div>
+          </div>
+          <div class="highlight-card glass-card">
+            <div class="highlight-icon"><i data-lucide="brain-circuit"></i></div>
+            <div class="highlight-info">
+              <h3>Yapay Zeka & Veri</h3>
+              <p>Python ile makine öğrenmesi ve veri bilimi süreçlerine entegrasyon.</p>
+            </div>
+          </div>
+          <div class="highlight-card glass-card">
+            <div class="highlight-icon"><i data-lucide="code-2"></i></div>
+            <div class="highlight-info">
+              <h3>Temiz Kod</h3>
+              <p>Sürdürülebilir, OOP ve tasarım desenleri odaklı temiz kod yazımı.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TIMELINE SECTION
+  ════════════════════════════════════════════ -->
+  <section id="timeline" class="section timeline-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02 — Yolculuğum</span>
+        <h2 class="section-title">Kariyer Yolculuğum<span class="dot">.</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Gelecek Hedefleri</span>
+            <h3>Lisans & Uzmanlık</h3>
+            <h4>Bilgisayar Mühendisliği</h4>
+            <p>Bilgisayar Mühendisliği lisans derecesine geçiş yaparak kurumsal ve büyük ölçekli yazılım mimarilerinde uzman bir Backend Architect olma yolunda ilerliyorum.</p>
+            <div class="timeline-tags">
+              <span class="tag">Backend Architect</span>
+              <span class="tag">Yazılım Mimarisi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Keşif Süreci</span>
+            <h3>Yapay Zeka & Veri Bilimi Keşfi</h3>
+            <h4>Python & Makine Öğrenmesi</h4>
+            <p>Python, Makine Öğrenmesi ve Veri Bilimi alanlarında çalışmalara başlayarak; yapay zeka veri değerlendirme süreçlerine katkı sağlama vizyonu edindim.</p>
+            <div class="timeline-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Makine Öğrenmesi</span>
+              <span class="tag">Veri Bilimi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Uzmanlaşma</span>
+            <h3>Backend Odaklanması</h3>
+            <h4>C# & .NET Core</h4>
+            <p>C# .NET Core, ASP.NET Core Web API, SQL ve Dapper teknolojilerinde derinleşerek mimari projeler ve RESTful sistemler geliştirdim.</p>
+            <div class="timeline-tags">
+              <span class="tag">C#</span>
+              <span class="tag">.NET Core</span>
+              <span class="tag">Dapper</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Temeller</span>
+            <h3>Akademik Başlangıç & Temeller</h3>
+            <h4>Ankara Üniversitesi</h4>
+            <p>Bilgisayar Programcılığı eğitimi ile yazılım dünyasına profesyonel adım attım. Algoritma, OOP ve veritabanı temellerimi güçlü bir şekilde oluşturdum.</p>
+            <div class="timeline-tags">
+              <span class="tag">Algoritma</span>
+              <span class="tag">Veritabanı</span>
+              <span class="tag">OOP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EDUCATION SECTION
+  ════════════════════════════════════════════ -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03 — Eğitim</span>
+        <h2 class="section-title">Akademik Geçmişim<span class="dot">.</span></h2>
+      </div>
+
+      <div class="education-grid">
+        <div class="education-card glass-card reveal">
+          <div class="edu-card-header">
+            <div class="edu-icon"><i data-lucide="graduation-cap"></i></div>
+            <div class="edu-badge">Ön Lisans</div>
+          </div>
+          <h3>Bilgisayar Programcılığı</h3>
+          <h4>Ankara Üniversitesi</h4>
+          <div class="edu-meta">
+            <span><i data-lucide="calendar"></i> 2024 — 2026</span>
+            <span><i data-lucide="award"></i> GPA: 3.64 / 4.00</span>
+          </div>
+          <p>Veri tabanı yönetimi, algoritma geliştirme ve nesne yönelimli programlama üzerine güçlü akademik temeller. Yüksek başarı ile mezuniyet.</p>
+          <div class="edu-achievements">
+            <span class="achievement"><i data-lucide="trophy"></i> Yüksek Akademik Ortalama (3.64)</span>
+          </div>
+        </div>
+
+        <div class="education-card glass-card reveal">
+          <div class="edu-card-header">
+            <div class="edu-icon"><i data-lucide="book-open"></i></div>
+            <div class="edu-badge">Hedef / Süreç</div>
+          </div>
+          <h3>Bilgisayar Mühendisliği</h3>
+          <h4>DGS ile Geçiş</h4>
+          <div class="edu-meta">
+            <span><i data-lucide="star"></i> Ulusal DGS - 359. Sıra</span>
+          </div>
+          <p>DGS (Dikey Geçiş Sınavı) ile elde edilen yüksek derece sayesinde Bilgisayar Mühendisliği / İstatistik lisans eğitimine geçiş süreci.</p>
+          <div class="edu-achievements">
+            <span class="achievement"><i data-lucide="check-circle"></i> Mühendisliğe Hazırlık</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS SECTION
+  ════════════════════════════════════════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">04 — Yetenekler</span>
+        <h2 class="section-title">Teknoloji Yığınım<span class="dot">.</span></h2>
+      </div>
+
+      <div class="skills-categories">
+
+        <!-- BACKEND & LANGUAGES -->
+        <div class="skill-category reveal">
+          <div class="category-header">
+            <i data-lucide="server"></i>
+            <h3>Backend & Programlama Dilleri</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🟣</div>
+              <span>C#</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🌐</div>
+              <span>.NET Core</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">⚙️</div>
+              <span>ASP.NET Core API</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🐍</div>
+              <span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DATABASE -->
+        <div class="skill-category reveal">
+          <div class="category-header">
+            <i data-lucide="database"></i>
+            <h3>Veritabanı & ORM</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🗄️</div>
+              <span>SQL Server</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🐘</div>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🐬</div>
+              <span>MySQL</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">⚡</div>
+              <span>Dapper</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOMAINS -->
+        <div class="skill-category reveal">
+          <div class="category-header">
+            <i data-lucide="blocks"></i>
+            <h3>Uzmanlık Alanları & Araçlar</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🔗</div>
+              <span>RESTful API Tasarımı</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🧩</div>
+              <span>Microservices</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">📊</div>
+              <span>Veri Mimarisi</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🧠</div>
+              <span>Yapay Zeka & Veri Analitiği</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🔀</div>
+              <span>Git & GitHub</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">📐</div>
+              <span>OOP & SOLID</span>
+            </div>
+            <div class="skill-card glass-card">
+              <div class="skill-icon">🔄</div>
+              <span>Agile/Scrum</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT SECTION
+  ════════════════════════════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">05 — İletişim</span>
+        <h2 class="section-title">Birlikte Çalışalım<span class="dot">.</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-description">
+            Bir projeniz mi var? Güçlü bir backend mimarisi mi kurmak istiyorsunuz?
+            Bana aşağıdaki kanallardan ulaşabilirsiniz.
+          </p>
+
+          <div class="contact-cards">
+            <div class="contact-card glass-card" id="email-card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <div>
+                <h4>E-posta</h4>
+                <span class="contact-value" data-email="ahoo00881@icloud.com">ahoo00881@icloud.com</span>
+              </div>
+              <button class="copy-btn" data-copy="ahoo00881@icloud.com" aria-label="E-postayı kopyala">
+                <i data-lucide="copy"></i>
+              </button>
+            </div>
+
+            <a href="https://www.linkedin.com/in/ahmet-hamdi-o%C4%9Fuz-4b7ba5344/" target="_blank" rel="noopener" class="contact-card glass-card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <div>
+                <h4>LinkedIn</h4>
+                <span class="contact-value">Ahmet Hamdi Oğuz</span>
+              </div>
+              <i data-lucide="external-link" class="external-icon"></i>
+            </a>
+
+            <a href="https://github.com/hamdiiahmett" target="_blank" rel="noopener" class="contact-card glass-card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <div>
+                <h4>GitHub</h4>
+                <span class="contact-value">hamdiiahmett</span>
+              </div>
+              <i data-lucide="external-link" class="external-icon"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper reveal">
+          <form id="contact-form" class="contact-form glass-card">
+            <h3>Mesaj Gönderin</h3>
+
+            <div class="form-group">
+              <label for="form-name">Ad Soyad</label>
+              <input type="text" id="form-name" name="name" placeholder="Adınız Soyadınız" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-email">E-posta</label>
+              <input type="email" id="form-email" name="email" placeholder="email@ornek.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject">Konu</label>
+              <input type="text" id="form-subject" name="subject" placeholder="Proje hakkında..." />
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Mesaj</label>
+              <textarea id="form-message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+              <i data-lucide="send"></i>
+              <span>Gönder</span>
+            </button>
+
+            <div id="form-status" class="form-status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">Ahmet Hamdi</span>
+          <span class="logo-bracket"> /&gt;</span>
+        </a>
+        <p>&copy; 2026 Ahmet Hamdi Oğuz. Tüm hakları saklıdır.</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/ahmet-hamdi-o%C4%9Fuz-4b7ba5344/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" class="footer-social-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/hamdiiahmett" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub" class="footer-social-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+        <a href="mailto:ahoo00881@icloud.com" aria-label="E-posta" title="E-posta" class="footer-social-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-right">
+        <!-- FOOTER CV DROPDOWN (UPWARDS) -->
+        <div class="cv-dropdown-wrapper cv-dropdown-up" id="footer-cv-dropdown">
+          <button class="btn btn-ghost btn-sm cv-trigger-btn" type="button" aria-haspopup="true" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            <span>CV İndir</span>
+            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+          </button>
+          <div class="cv-dropdown-menu glass-card">
+            <a href="Ahmet_Hamdi_Oguz_CV_TR.pdf" download="Ahmet_Hamdi_Oguz_CV_TR.pdf" class="cv-dropdown-item">
+              <span class="cv-flag">🇹🇷</span>
+              <div class="cv-item-info">
+                <strong>Türkçe CV</strong>
+                <small>PDF formatında indir</small>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            </a>
+            <a href="Ahmet_Hamdi_Oguz_CV_EN.pdf" download="Ahmet_Hamdi_Oguz_CV_EN.pdf" class="cv-dropdown-item">
+              <span class="cv-flag">🇬🇧</span>
+              <div class="cv-item-info">
+                <strong>English CV</strong>
+                <small>Download PDF format</small>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <span>ile tasarlandı ve kodlandı.</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
